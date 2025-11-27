@@ -5,3 +5,44 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.margin {
+    margin-right: 43px;
+    margin-left: 43px;
+}
+.header {
+    background-color: #F8F7F7;
+    margin-top: 31px;
+    width: 100%;
+    border-radius: 10px;
+}
+.header_list {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+.header_item:nth-child(1) {
+    margin-right: 39px;
+}
+.header_item:nth-child(2) {
+    margin-right: 41px;
+}
+.header_item:nth-child(3) {
+    margin-right: 40px;
+}
+.header_item:nth-child(4) {
+    margin-right: 56px;
+}
+.header_logo {
+    width: 54.73px;
+    height: 56px;
+}
+.header_arrow_down_1 {
+    width: 18.57px;
+    height: 10px;
+}
+.header_arrow_down_2 {
+    width: 18.57px;
+    height: 10px;
+}
+
