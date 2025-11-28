@@ -5,21 +5,24 @@
     padding-left: 15px;
     padding-right: 15px;
 }
-.margin {
+/* .margin {
     margin-right: 43px;
     margin-left: 43px;
-}
+} */
 .header {
-    background-color: #F8F7F7;
     margin-top: 31px;
-    width: 100%;
-    border-radius: 10px;
+    margin-right: 27px;
+    margin-left: 27px;
 }
 .header_list {
+    height: 108px;
+    background-color: #F8F7F7;
+    /* width: 100%; */
+    border-radius: 10px;
     display: flex;
+    align-items: center; /* vertically center all header items inside the fixed height */
     list-style: none;
-    text-align: center;
-    justify-content: center;
+    justify-content: flex-start; /* use valid flexbox value */
 }
 .header_item:nth-child(1) {
     margin-right: 39px;
@@ -33,16 +36,60 @@
 .header_item:nth-child(4) {
     margin-right: 56px;
 }
+.header_item:last-child {
+    margin-left: auto;
+    margin-right: 27px;
+}
+.header_logo_box {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center; /* center vertically */
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 19px;
+}
 .header_logo {
     width: 54.73px;
     height: 56px;
+    display: block; /* prevent SVG baseline offset so it centers correctly */
+    max-width: 100%;
+    max-height: 100%;
 }
-.header_arrow_down_1 {
-    width: 18.57px;
-    height: 10px;
+.header_variants {
+    font-size: 22px;
+    margin: 0; /* remove default H3 margins so vertical centering is precise */
 }
+.header_chosse_list {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+    align-items: center;
+    /* text-align: center;
+    justify-content: center; */
+}
+.header_sign_up_button {
+    background: #F8F7F7;
+    border: #F8F7F7;
+    font-size: 22px;
+}
+.header_sing_in_button {
+    width: 268px;
+    height: 70px;
+    background-color: #FF9D00;
+    border-color: #F8F7F7;
+    border-radius: 52px;   
+    color: #F8F7F7;
+    font-size: 22px;
+    box-shadow: none;
+}
+.header_arrow_down_1,
 .header_arrow_down_2 {
     width: 18.57px;
     height: 10px;
+    display: inline-block; /* ensure image is inline and respects vertical-align */
+    vertical-align: middle; /* align with surrounding text */
+    object-fit: contain; /* scale properly inside width/height */
+    margin-left: 6px; /* small spacing from the label */
 }
 
