@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/registration/registration.css">
 </head>
 <body>
-    <section class="header">
+    <header class="header">
             <div class="container">
                 <ul class="header_list">
                     <li class="header_item">
@@ -48,6 +48,34 @@
                         </ul>
                     </li>
                 </ul>
+            </div>
+        </header>
+
+        <section class="registration">
+            <div class="registration_description">
+                <h1 class="registration_title"><span class="highlight">Увійдіть</span> на<br>Студент<span class="highlight">+</span></h1>
+                <p class="registration_text">Доступність послуг та кожен документ<br>на кінчиках пальців</p>
+            </div>
+            <div class="registration_sing_up_blanc">
+                <div class="registration_title_box">
+                    <svg class="registration_title_box_arrow_svg">
+                        <use class="registration_title_box_arrow" href="./img/registration/header/arrow-back.svg"></use>
+                    </svg>
+                    <h3 class="registration_title_box_title">Вхід</h3>
+                </div>
+                <div class="registration_sign_up_box">
+                    <ul class="registration_sign_up_box_list">
+                        <li class="registration_sign_up_box_item">
+                            <label for="registration_email">Email</label>
+                            <input class="registration_email_input" type="email" id="registration_email" name="email" placeholder="Введіть вашу електронну пошту">
+                        </li>
+                        <li class="registration_sign_up_box_item">
+                            <label for="registration_password">Пароль</label>
+                            <input class="registration_password_input" type="password" id="registration_password" name="password" placeholder="Введіть ваш пароль">
+                        </li>
+                    </ul>
+                </div>
+                <button class="registration_sing_up_button">Увійти</button>
             </div>
         </section>
 </body>
