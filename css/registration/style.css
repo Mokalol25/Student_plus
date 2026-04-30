@@ -17,18 +17,23 @@ body {
   color: #333;
 }
 
+.logo a {
+  display: block;
+  cursor: pointer;
+}
+
 /* Шапка (Header) */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: #f8f7f7;
-    /* Змінюємо з 60px на 25px */
-    border-radius: 25px; 
-    margin: 20px auto;
-    max-width: 95%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f8f7f7;
+  /* Змінюємо з 60px на 25px */
+  border-radius: 25px;
+  margin: 20px auto;
+  max-width: 95%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .logo img {
@@ -37,100 +42,100 @@ body {
 }
 
 .nav a {
-    text-decoration: none;
-    color: #000;
-    margin: 0 15px;
-    font-size: 16px;
-    /* Робимо текст жирним як у демці */
-    font-weight: 700; 
-    display: inline-flex;
-    align-items: center;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #000;
+  margin: 0 15px;
+  font-size: 16px;
+  /* Робимо текст жирним як у демці */
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
 }
 
 .arrow-icon {
-    display: inline-block;
-    width: 10px;  /* ширина сторін */
-    height: 10px;
-    margin-left: 10px;
-    margin-top: -4px; /* щоб була по центру тексту */
-    border-right: 2px solid #000000; /* товщина як у Figma */
-    border-bottom: 2px solid #000000;
-    border-radius: 2px; /* твій border-radius з коду фігми */
-    transform: rotate(45deg); /* повертаємо квадрат, щоб вийшла стрілка */
-    transition: 0.3s ease;
+  display: inline-block;
+  width: 10px; /* ширина сторін */
+  height: 10px;
+  margin-left: 10px;
+  margin-top: -4px; /* щоб була по центру тексту */
+  border-right: 2px solid #000000; /* товщина як у Figma */
+  border-bottom: 2px solid #000000;
+  border-radius: 2px; /* твій border-radius з коду фігми */
+  transform: rotate(45deg); /* повертаємо квадрат, щоб вийшла стрілка */
+  transition: 0.3s ease;
 }
 
 .nav a:hover {
-    color: #FF9F0A; /* Помаранчевий при наведенні */
+  color: #ff9f0a; /* Помаранчевий при наведенні */
 }
 
 .nav a:hover .arrow-icon {
-    border-color: #FF9F0A; /* стрілка теж змінює колір! */
+  border-color: #ff9f0a; /* стрілка теж змінює колір! */
 }
 
 .arrow {
-    font-size: 10px; /* Стрілочка має бути значно меншою за текст */
-    margin-left: 6px;
-    vertical-align: middle;
-    color: #333;
+  font-size: 10px; /* Стрілочка має бути значно меншою за текст */
+  margin-left: 6px;
+  vertical-align: middle;
+  color: #333;
 }
 
 /* Кнопка Увійти */
 .btn-login {
-    text-decoration: none;
-    color: #000;
-    margin-right: 20px;
-    font-weight: 700; /* Додаємо жирність */
-    font-size: 16px;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #000;
+  margin-right: 20px;
+  font-weight: 700; /* Додаємо жирність */
+  font-size: 16px;
+  transition: 0.3s;
 }
 
 .btn-login:hover {
-    color: #FF9F0A; /* Додамо підсвічування для єдиного стилю */
+  color: #ff9f0a; /* Додамо підсвічування для єдиного стилю */
 }
 
 /* Кнопка Зареєструватись */
 .btn-reg {
-    background-color: #FF9F0A; 
-    color: white !important;
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 25px; /* Ми змінили радіус на 25px, як у шапки */
-    font-weight: 700; /* Теж жирна */
-    font-size: 16px;
-    display: inline-block;
-    transition: 0.3s;
+  background-color: #ff9f0a;
+  color: white !important;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 25px; /* Ми змінили радіус на 25px, як у шапки */
+  font-weight: 700; /* Теж жирна */
+  font-size: 16px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .btn-reg:hover {
-    background-color: #e68a00; /* Трохи темніший при наведенні */
-    transform: translateY(-2px);
+  background-color: #e68a00; /* Трохи темніший при наведенні */
+  transform: translateY(-2px);
 }
 
 /* Головний блок (Hero) */
-  .hero {
-    background-image: url("../../img/gen/plus.png"); /* шлях до твого плюсика */
-    background-blend-mode: multiply; /* плюсики стануть м'якшими */
-    background-color: #e5e5e5;
-    background-size: 1000px;
-    text-align: center;
-    padding: 110px 0;
-    margin-top: -50px; /* Щоб заходило під шапку, як на макеті */
-    z-index: -1;
-    position: relative;
-    border-radius: 0 0 40px 40px;
-  }
+.hero {
+  background-image: url("../../img/gen/plus.png"); /* шлях до твого плюсика */
+  background-blend-mode: multiply; /* плюсики стануть м'якшими */
+  background-color: #e5e5e5;
+  background-size: 1000px;
+  text-align: center;
+  padding: 110px 0;
+  margin-top: -50px; /* Щоб заходило під шапку, як на макеті */
+  z-index: -1;
+  position: relative;
+  border-radius: 0 0 40px 40px;
+}
 
-  .hero h1 {
-    letter-spacing: -2px; /* Це зробить напис стильним, як у Figma */
-    line-height: 1;
-    color: #000;
-    margin-bottom: 20px;
-    font-size: 80px;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
+.hero h1 {
+  letter-spacing: -2px; /* Це зробить напис стильним, як у Figma */
+  line-height: 1;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 80px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
 
 .hero h1 span {
   color: #ff9f0a;
@@ -185,19 +190,19 @@ body {
 }
 
 .news-decor {
-    position: absolute;
-    left: 0;
-    /* Налаштуй висоту так, щоб блоки красиво заходили під картку новин */
-    top: 650px; 
-    width: 110px; /* або підбери розмір як у Figma */
-    z-index: -1; /* щоб картинка була під білою плашкою */
+  position: absolute;
+  left: 0;
+  /* Налаштуй висоту так, щоб блоки красиво заходили під картку новин */
+  top: 650px;
+  width: 110px; /* або підбери розмір як у Figma */
+  z-index: -1; /* щоб картинка була під білою плашкою */
 }
 
 .news-decor-right {
-    position: absolute;
-    right: 0; /* Притискаємо до правого краю */
-    top: 500px; 
-    width: 110px;
-    z-index: -1;
-    transform: scaleX(-1); /* Віддзеркалюємо по горизонталі */
+  position: absolute;
+  right: 0; /* Притискаємо до правого краю */
+  top: 500px;
+  width: 110px;
+  z-index: -1;
+  transform: scaleX(-1); /* Віддзеркалюємо по горизонталі */
 }

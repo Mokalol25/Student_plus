@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+/* Застосовуємо Inter як основний шрифт */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif !important;
+}
+
+body {
+    background-color: #f2f2f2; /* Колір фону як на головній */
+    color: #333;
+}
+
+.logo a {
+    display: block;
+    cursor: pointer;
+}
+
+/* Шапка (Header) - копіюємо стиль з твоєї головної */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #f8f7f7;
+    border-radius: 25px; 
+    margin: 20px auto;
+    max-width: 95%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Навігація зі стрілочками */
+.nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 700; 
+    display: inline-flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #FF9F0A;
+}
+
+/* Бейдж профілю в стилі твоїх кнопок */
+.profile-badge {
+    display: flex;
+    align-items: center;
+    background: #e5e5e5;
+    padding: 5px 5px 5px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-badge:hover {
+    background: #d9d9d9;
+}
+
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    background: #FF9F0A;
+    border-radius: 50%;
+    margin-left: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Контент кабінету */
+.profile-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.welcome-header h1 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #000;
+}
+
+.orange-line {
+    width: 100%;
+    height: 2px;
+    background-color: #FF9F0A;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Велика сіра плашка під послуги */
+.services-main-card {
+    background-color: #f8f7f7;
+    border-radius: 40px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.services-main-card h2 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: flex;
+    gap: 20px;
+}
+
+/* Картки послуг (як News Card) */
+.service-item {
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.service-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.service-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #eeeeee;
+    padding-top: 20px;
+}
+
+.service-bottom p {
+    font-size: 14px;
+    color: #666;
+}
+
+.service-arrow {
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+.service-arrow:hover {
+    color: #FF9F0A;
+}
+
+/* Декор - кубики */
+.profile-decor-left {
+    position: absolute;
+    left: -80px;
+    top: 100px;
+    width: 110px;
+    z-index: -1;
+}
