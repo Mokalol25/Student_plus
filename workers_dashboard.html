@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студент+ | Панель працівника</title>
+    <link rel="stylesheet" href="css/workers_dashboard.css">
+</head>
+<body>
+
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Student Plus Logo" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Послуги <span class="arrow-icon"></span></a>
+        <a href="#">Що таке Студент+?</a>
+        <a href="#">Новини</a>
+        <a href="#">Про нас <span class="arrow-icon"></span></a>
+      </nav>
+      <div class="profile-badge">
+        <span class="profile-text">Ваш профіль</span>
+        <div class="avatar-circle">
+          <img src="img/gen/avatar.png" alt="M" class="avatar-img" />
+        </div>
+      </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="welcome-header">
+            <h1>Вітаємо, Деканаті Ольга Іванівна!</h1>
+            <div class="orange-line"></div>
+            <p class="subtitle">Ви — працівник деканату інституту ІКТА</p>
+        </div>
+
+        <section class="services-main-card">
+            <div class="services-grid">
+                <div class="service-item" id="ordersCard">
+                    <h3>Розглянути за'явки на довідки</h3>
+                    <div class="service-bottom">
+                        <p>Натисніть для перегляду</p>
+                        <span class="service-arrow">→</span>
+                    </div>
+                </div>
+
+                <div class="service-item" id="grantsCard">
+                    <h3>Панель керування грантовими угодами</h3>
+                    <div class="service-bottom">
+                        <p>Натисніть для перегляду</p>
+                        <span class="service-arrow">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Обробка кліку для першої картки (Довідки)
+        document.getElementById('ordersCard').addEventListener('click', function() {
+            this.classList.add('clicked'); // Запускаємо анімацію стискання
+            setTimeout(() => {
+                window.location.href = 'orders_list.html';
+            }, 150);
+        });
+
+        // Обробка кліку для другої картки (Гранти)
+        document.getElementById('grantsCard').addEventListener('click', function() {
+            this.classList.add('clicked');
+            // Повертаємо плитку в початковий стан через 150мс
+            setTimeout(() => {
+                this.classList.remove('clicked');
+            }, 150);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлені послуги | Студент+</title>
+    <link rel="stylesheet" href="css/orders_list.css">
+</head>
+<body>
+
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Student Plus Logo" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Послуги <span class="arrow-icon"></span></a>
+        <a href="#">Що таке Студент+?</a>
+        <a href="#">Новини</a>
+        <a href="#">Про нас <span class="arrow-icon"></span></a>
+      </nav>
+      <div class="profile-badge">
+        <span class="profile-text">Ваш профіль</span>
+        <div class="avatar-circle">
+          <img src="img/gen/avatar.png" alt="M" class="avatar-img" />
+        </div>
+      </div>
+    </header>
+
+    <main class="profile-container">
+        <div class="welcome-header">
+            <h1>Вітаємо, Деканаті Ольга Іванівна!</h1>
+            <div class="orange-line"></div>
+            <p class="subtitle">Ви — працівник деканату інституту ІКТА</p>
+        </div>
+
+        <section class="services-main-card">
+            <div class="list-container">
+                <div class="list-header">
+                    <h2>Замовлені послуги</h2>
+                    <div class="filter-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                        <span>⌵</span>
+                    </div>
+                </div>
+
+ <div class="orders-list">
+    <div class="order-item-row">
+        <span class="cell-name">Замовити довідку з місця навч...</span>
+        <span class="cell-date">08 верес. 2025</span>
+        <div class="user-cell">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=1" class="user-avatar">
+            <span>Згоба Мар...</span>
+        </div>
+        <button class="details-btn" onclick="goToDetails('1')">Детальніше</button>
+    </div>
+
+    <div class="order-item-row">
+        <span class="cell-name">Замовити довідку з місця навч...</span>
+        <span class="cell-date">09 верес. 2025</span>
+        <div class="user-cell">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=2" class="user-avatar">
+            <span>Ганай Арт...</span>
+        </div>
+        <button class="details-btn" onclick="goToDetails('2')">Детальніше</button>
+    </div>
+
+        <div class="order-item-row">
+        <span class="cell-name">Замовити довідку з місця навч...</span>
+        <span class="cell-date">19 верес. 2025</span>
+        <div class="user-cell">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=2" class="user-avatar">
+            <span>Купибіда Іва...</span>
+        </div>
+        <button class="details-btn" onclick="goToDetails('2')">Детальніше</button>
+    </div>
+
+    </div>
+
+<script>
+    function goToDetails(orderId) {
+        // Додаємо легку анімацію натискання кнопки
+        const btn = event.target;
+        btn.style.transform = 'scale(0.9)';
+        
+        setTimeout(() => {
+            // Перехід на сторінку деталей. 
+            // В реальному проекті тут було б: 'order_details.html?id=' + orderId
+            window.location.href = 'order_details.html';
+        }, 100);
+    }
+</script>
+
+                <div class="pagination">
+                    <span>Показано 4 з 52</span>
+                    <div class="pager-controls">
+                        <button class="page-arrow">‹</button>
+                        <button class="page-arrow">›</button>
+                        <button class="page-arrow">»</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
