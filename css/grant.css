@@ -1,16 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
 
-/* Застосовуємо Inter як основний шрифт */
+* {
+  font-family: "Inter", sans-serif !important;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f2f2f2; /* Колір фону як на головній */
-  color: #333;
+  background-color: #f2f2f2;
+  font-family: "Inter", sans-serif;
 }
 
 .logo a {
@@ -18,13 +21,14 @@ body {
   cursor: pointer;
 }
 
-/* Шапка (Header) - копіюємо стиль з твоєї головної */
+/* Header (такий самий як на головній) */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
   background-color: #f8f7f7;
+  /* Змінюємо з 60px на 25px */
   border-radius: 25px;
   margin: 20px auto;
   max-width: 95%;
@@ -32,16 +36,16 @@ body {
 }
 
 .logo img {
-  height: 40px;
+  height: 40px; /* Логотип тепер буде маленьким! */
   width: auto;
 }
 
-/* Навігація зі стрілочками */
 .nav a {
   text-decoration: none;
   color: #000;
   margin: 0 15px;
   font-size: 16px;
+  /* Робимо текст жирним як у демці */
   font-weight: 700;
   display: inline-flex;
   align-items: center;
@@ -62,7 +66,7 @@ body {
 }
 
 .nav a:hover {
-  color: #ff9f0a;
+  color: #ff9f0a; /* Помаранчевий при наведенні */
 }
 
 .nav a:hover .arrow-icon {
@@ -76,7 +80,6 @@ body {
   color: #333;
 }
 
-/* Бейдж профілю в стилі твоїх кнопок */
 .profile-badge {
   display: flex;
   align-items: center;
@@ -109,111 +112,157 @@ body {
   object-fit: cover;
 }
 
-/* Контент кабінету */
-.profile-container {
-  max-width: 1000px;
+/* Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: #f4f4f4;
+  border-radius: 20px;
+  padding: 15px;
+  width: 220px;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.dropdown-menu.active {
+  display: block;
+}
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Контент */
+.grant-container {
+  max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
-.welcome-header h1 {
+h1 {
+  font-weight: 900;
   font-size: 32px;
-  font-weight: 900;
-  color: #000;
-}
-
-.orange-line {
-  width: 100%;
-  height: 2px;
-  background-color: #ff9f0a;
-  margin: 15px 0;
-}
-
-.subtitle {
-  font-size: 18px;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-/* Велика сіра плашка під послуги */
-.services-main-card {
-  background-color: #f8f7f7;
-  border-radius: 40px;
-  padding: 40px;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-}
-
-.services-main-card h2 {
-  font-size: 28px;
-  font-weight: 900;
   margin-bottom: 30px;
 }
 
-.services-grid {
+.grant-content-wrapper {
   display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.info-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-/* Картки послуг (як News Card) */
-.service-item {
-  background: white;
+.info-card {
   padding: 30px;
   border-radius: 30px;
+}
+.personal-data {
+  background-color: #ede4e4;
+} /* Світло-рожевий/сірий */
+.grant-info {
+  background-color: #d1d5d8;
+} /* Сірий */
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+p {
+  margin: 12px 0;
+  font-size: 18px;
+  line-height: 1.4;
+}
+strong {
+  font-weight: 700;
+}
+em {
+  font-style: italic;
+  color: #333;
+}
+
+.doc-link {
+  color: #0033cc;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Сайдбар підпису */
+.sign-sidebar {
   flex: 1;
+  position: relative;
+}
+.sign-card {
+  background: #f4f4f4;
+  border-radius: 30px;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+h3 {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sign-methods {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 220px;
-  transition: 0.3s;
+  gap: 15px;
 }
-
-.service-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.service-item h3 {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.service-bottom {
+.sign-method-btn {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  border-top: 1px solid #eeeeee;
-  padding-top: 20px;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sign-method-btn:hover {
+  background: #ff9f0a;
+  color: white;
 }
 
-.service-bottom p {
-  font-size: 14px;
-  color: #666;
-}
-
-.service-arrow {
-  font-size: 24px;
-  text-decoration: none;
-  color: #000;
-  transition: 0.3s;
-}
-
-.service-arrow:hover {
-  color: #ff9f0a;
-}
-
-/* Декор - кубики */
-.profile-decor-left {
+/* Декор блоки (оранжеві) */
+.decor-blocks {
   position: absolute;
-  left: -80px;
-  top: 100px;
-  width: 110px;
-  z-index: -1;
+  right: -20px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+.orange-block {
+  width: 60px;
+  height: 60px;
+  background: #ff9f0a;
+  border-radius: 10px;
 }
 
-/* Робимо бейдж контейнером для меню */
 .profile-badge {
   position: relative; /* Критично для позиціювання меню */
 }
@@ -231,7 +280,6 @@ body {
   z-index: 100;
 }
 
-/* Клас, який ми будемо додавати через JS */
 .dropdown-menu.active {
   display: block;
 }
