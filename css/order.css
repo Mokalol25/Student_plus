@@ -13,6 +13,11 @@ body {
   color: #333;
 }
 
+.logo a {
+  display: block;
+  cursor: pointer;
+}
+
 /* 2. ШАПКА (HEADER) - Копія твого ідеального стилю */
 .header {
   display: flex;
@@ -42,18 +47,46 @@ body {
   transition: 0.3s;
 }
 
+.arrow-icon {
+  display: inline-block;
+  width: 10px; /* ширина сторін */
+  height: 10px;
+  margin-left: 10px;
+  margin-top: -4px; /* щоб була по центру тексту */
+  border-right: 2px solid #000000; /* товщина як у Figma */
+  border-bottom: 2px solid #000000;
+  border-radius: 2px; /* твій border-radius з коду фігми */
+  transform: rotate(45deg); /* повертаємо квадрат, щоб вийшла стрілка */
+  transition: 0.3s ease;
+}
+
 .nav a:hover {
   color: #ff9f0a;
 }
 
+.nav a:hover .arrow-icon {
+  border-color: #ff9f0a; /* стрілка теж змінює колір! */
+}
+
+.arrow {
+  font-size: 10px; /* Стрілочка має бути значно меншою за текст */
+  margin-left: 6px;
+  vertical-align: middle;
+  color: #333;
+}
+
 .profile-badge {
-  position: relative;
   display: flex;
   align-items: center;
-  background: #ebebeb;
+  background: #e5e5e5;
   padding: 5px 5px 5px 20px;
   border-radius: 30px;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-badge:hover {
+  background: #d9d9d9;
 }
 
 .avatar-circle {
@@ -63,6 +96,9 @@ body {
   border-radius: 50%;
   margin-left: 15px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-img {
@@ -160,6 +196,11 @@ body {
 }
 
 /* 6. ВИПАДАЮЧЕ МЕНЮ (DROPDOWN) */
+.profile-badge {
+  position: relative; /* Критично для позиціювання меню */
+}
+  
+
 .dropdown-menu {
   display: none;
   position: absolute;
