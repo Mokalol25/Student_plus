@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Особистий кабінет | Студент+</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="Student Plus Logo" />
+        </a>
+      </div>
+      <nav class="nav">
+        <a href="profile.html">Послуги <span class="arrow-icon"></span></a>
+        <a href="#">Що таке Студент+?</a>
+        <a href="#">Новини</a>
+        <a href="#">Про нас <span class="arrow-icon"></span></a>
+      </nav>
+      <div class="profile-badge" id="profileBtn">
+        <span class="profile-text">Ваш профіль</span>
+        <div class="avatar-circle">
+          <img src="img/gen/avatar.png" alt="M" class="avatar-img" />
+        </div>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="profile-active.html" class="dropdown-item">
+            <div class="dot"></div>
+            Перейти в профіль
+          </a>
+          <a href="#" class="dropdown-item">
+            <div class="dot"></div>
+            Мої послуги
+          </a>
+          <a href="#" class="dropdown-item">
+            <div class="dot"></div>
+            Налаштування
+          </a>
+          <hr class="dropdown-divider" />
+          <a href="index.html" class="dropdown-item exit">
+            <div class="dot"></div>
+            Вийти
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="profile-container">
+      <section class="welcome-header">
+        <h1>Вітаємо, Згоба Марко Ігорович!</h1>
+        <div class="orange-line"></div>
+        <p class="subtitle">Ви — студент інституту ІКТА</p>
+      </section>
+
+      <section class="services-wrapper">
+        <img src="img/gen/orange-blocks.png" class="news-decor" alt="decor" />
+        <img
+          src="img/gen/orange-blocks.png"
+          class="news-decor-right"
+          alt="decor"
+        />
+
+        <div class="services-main-card">
+          <h2>Доступні послуги</h2>
+
+          <div class="services-grid">
+            <!-- Картка 1 -->
+            <div class="service-item">
+              <div class="service-top">
+                <h3>Замовити довідку з місця навчання</h3>
+              </div>
+              <div class="service-bottom">
+                <p>Час виконання:<br />1 - 3 робочі дні</p>
+                <a href="order-reference.html" class="service-arrow">➔</a>
+              </div>
+            </div>
+
+            <!-- Картка 2 -->
+            <div class="service-item">
+              <div class="service-top">
+                <h3>Державний грант на навчання</h3>
+              </div>
+              <div class="service-bottom">
+                <p>Очікує підписання</p>
+                <a href="grant-details.html" class="service-arrow">➔</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const profileBtn = document.getElementById("profileBtn");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      // Відкриття/закриття при кліку
+      profileBtn.addEventListener("click", function (e) {
+        e.stopPropagation(); // Щоб клік не йшов далі
+        dropdownMenu.classList.toggle("active");
+      });
+
+      // Закриття, якщо клікнути в будь-якому іншому місці екрана
+      document.addEventListener("click", function () {
+        dropdownMenu.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
