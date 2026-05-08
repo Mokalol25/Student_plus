@@ -1,0 +1,297 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.header {
+    margin-top: 31px;
+    margin-right: 27px;
+    margin-left: 27px;
+}
+.header_list {
+    height: 108px;
+    background-color: #F8F7F7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: flex-start;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.header_item:nth-child(1) {
+    margin-right: 39px;
+}
+.header_item:nth-child(2) {
+    margin-right: 41px;
+}
+.header_item:nth-child(3) {
+    margin-right: 40px;
+}
+.header_item:nth-child(4) {
+    margin-right: 56px;
+}
+.header_item:last-child {
+    margin-left: auto;
+    margin-right: 27px;
+}
+.header_logo_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 19px;
+}
+.header_logo {
+    width: 54.73px;
+    height: 56px;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.header_variants {
+    margin: 0;
+}
+.header_chosse_list {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+    align-items: center;
+}
+.header_sign_up_button {
+    background: #F8F7F7;
+    border: #F8F7F7;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.header_sing_in_button {
+    width: 268px;
+    height: 70px;
+    background-color: #FF9D00;
+    border-color: #F8F7F7;
+    border-radius: 52px;   
+    color: #F8F7F7;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    box-shadow: none;
+}
+.header_arrow_down_1,
+.header_arrow_down_2 {
+    width: 18.57px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: contain;
+    margin-left: 6px; 
+}
+
+.log_in {
+    margin-top: 123px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+}
+.log_in_title {
+    font-size: 64px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.hightlight {
+    color: #FF9D00;
+}
+.log_in_text {
+    font-size: 30px;
+    margin-top: 45px;
+    color: #545454;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Вибір ролі */
+.log_in_choose {
+    width: 540px;
+    height: 640px;
+    background-color: #F8F7F7;
+    border-radius: 25px;
+}
+.log_in_choose_box {
+    padding-top: 15px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.log_in_choose_title {
+    margin-left: 40px;
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.log_in_choose_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+    margin-top: 28px;
+    padding: 0;
+}
+.log_in_choose_item {
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    width: 480px;
+    height: 170px;
+    margin: 0 auto;
+    border-radius: 16px;
+    padding-top: 29px;
+}
+.log_in_choose_student_img,
+.log_in_choose_worker_img {
+    width: 96px;
+    height: 95.85px;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+.log_in_choose_student_title,
+.log_in_choose_worker_title {
+    font-size: 36px;
+    color: #000;
+    margin-top: 8px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.log_in_choose_other_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 18px auto 0 auto;
+    width: 480px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 16px;
+}
+.log_in_choose_other_box_text {
+    font-size: 24px;
+    color: #000;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* Вхід */
+.log_in_sing_up_blanc {
+    width: 540px;
+    height: 640px;
+    background-color: #F8F7F7;
+    border-radius: 25px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.log_in_title_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 41px;
+    position: relative;
+}
+.log_in_title_box_arrow_svg {
+    width: 31px;    
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    object-fit: contain;
+}
+.log_in_title_box_title {
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+.log_in_sign_up_box {
+    width: 480px;
+    height: 373px;
+    border-radius: 16px;
+    background-color: #fff;
+    margin-left: 30px;
+}
+.log_in_sign_up_box_list {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    padding: 30px;
+    list-style: none;
+}
+.log_in_sign_up_box_item {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+.log_in_email {
+    font-size: 30px;
+    color: #414141;
+}
+.log_in_email_input {
+    width: 410px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 16px;
+    border: none;
+    padding-left: 22px;
+    background: #E4E1DB;
+}
+.log_in_password {
+    font-size: 30px;
+    color: #414141;
+}
+.log_in_password_input {
+    width: 410px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 16px;
+    border: none;
+    padding-left: 22px;
+    background: #E4E1DB;
+}
+.log_in_sing_up_button {
+    width: 470px;
+    height: 60px;
+    margin-top: 67px;
+    margin-left: 39px;
+    background-color: #DDDDDD;
+    border-radius: 52px;   
+    color: #939393;
+    font-size: 22px;
+    box-shadow: none;
+    font-weight: 600;
+}

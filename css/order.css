@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+
+/* 1. БАЗОВІ НАЛАШТУВАННЯ (Твій стандарт) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif !important;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.logo a {
+  display: block;
+  cursor: pointer;
+}
+
+/* 2. ШАПКА (HEADER) - Копія твого ідеального стилю */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f8f7f7;
+  border-radius: 25px;
+  margin: 20px auto;
+  max-width: 95%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.arrow-icon {
+  display: inline-block;
+  width: 10px; /* ширина сторін */
+  height: 10px;
+  margin-left: 10px;
+  margin-top: -4px; /* щоб була по центру тексту */
+  border-right: 2px solid #000000; /* товщина як у Figma */
+  border-bottom: 2px solid #000000;
+  border-radius: 2px; /* твій border-radius з коду фігми */
+  transform: rotate(45deg); /* повертаємо квадрат, щоб вийшла стрілка */
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff9f0a;
+}
+
+.nav a:hover .arrow-icon {
+  border-color: #ff9f0a; /* стрілка теж змінює колір! */
+}
+
+.arrow {
+  font-size: 10px; /* Стрілочка має бути значно меншою за текст */
+  margin-left: 6px;
+  vertical-align: middle;
+  color: #333;
+}
+
+.profile-badge {
+  display: flex;
+  align-items: center;
+  background: #e5e5e5;
+  padding: 5px 5px 5px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-badge:hover {
+  background: #d9d9d9;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  background: #ff9f0a;
+  border-radius: 50%;
+  margin-left: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 3. ГОЛОВНИЙ КОНТЕНТ СТОРІНКИ */
+.order-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.order-main-card {
+  background-color: #f8f7f7;
+  border-radius: 60px;
+  padding: 80px 40px;
+  text-align: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+  position: relative;
+  z-index: 2;
+}
+
+.order-main-card h1 {
+  font-weight: 900;
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 45px;
+}
+
+/* 4. ФОРМА ТА КНОПКА */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.reason-input {
+  width: 100%;
+  max-width: 500px;
+  height: 65px;
+  background-color: #e5e1da; /* Сіро-бежевий як на макеті */
+  border: none;
+  border-radius: 18px;
+  padding: 0 25px;
+  font-size: 18px;
+  color: #333;
+  outline: none;
+}
+
+.btn-submit {
+  background-color: #ff9f0a;
+  color: white;
+  border: none;
+  padding: 18px 60px;
+  border-radius: 35px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #e68a00;
+  transform: scale(1.05);
+}
+
+/* 5. ДЕКОР (КУБИКИ) */
+.decor-blocks-right {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1;
+}
+
+.orange-block {
+  width: 70px;
+  height: 70px;
+  background-color: #ff9f0a;
+  border-radius: 12px;
+}
+
+/* 6. ВИПАДАЮЧЕ МЕНЮ (DROPDOWN) */
+.profile-badge {
+  position: relative; /* Критично для позиціювання меню */
+}
+  
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 0;
+  background: #f4f4f4;
+  border-radius: 25px;
+  padding: 15px;
+  width: 240px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.news-decor {
+  position: absolute;
+  left: 0;
+  /* Налаштуй висоту так, щоб блоки красиво заходили під картку новин */
+  top: 650px;
+  width: 110px; /* або підбери розмір як у Figma */
+  z-index: -1; /* щоб картинка була під білою плашкою */
+}
+
+.news-decor-right {
+  position: absolute;
+  right: 0; /* Притискаємо до правого краю */
+  top: 500px;
+  width: 110px;
+  z-index: -1;
+  transform: scaleX(-1); /* Віддзеркалюємо по горизонталі */
+}
