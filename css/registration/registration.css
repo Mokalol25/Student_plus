@@ -9,16 +9,20 @@
     margin-top: 31px;
     margin-right: 27px;
     margin-left: 27px;
+    position: relative;
+    padding: 0 42px; /* відступи по краях для всього header */
 }
 .header_list {
-    height: 108px;
+    height: 90px;
     background-color: #F8F7F7;
     border-radius: 10px;
     display: flex;
     align-items: center;
     list-style: none;
-    justify-content: flex-start;
-    font-size: 22px;
+    justify-content: center; /* меню по центру */
+    position: relative; /* для абсолютного позиціювання лого і кнопок */
+    padding: 0; /* padding переміщено на сам header */
+    font-size: 16px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -40,6 +44,22 @@
     margin-left: auto;
     margin-right: 27px;
 }
+
+/* Залишаємо логотип ліворуч і кнопки праворуч, а центроване меню посередині */
+.header_item:first-child {
+    position: absolute;
+    left: 42px; /* 42px від краю фону */
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
+.header_item:last-child {
+    position: absolute;
+    right: 42px; /* 42px від краю фону */
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+}
 .header_logo_box {
     display: flex;
     justify-content: center;
@@ -59,6 +79,13 @@
 .header_variants {
     margin: 0;
 }
+/* Вирівнювання всіх h3 у шапці по центру вертикально */
+.header_list .header_item h3 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
 .header_chosse_list {
     display: flex;
     list-style: none;
@@ -68,34 +95,37 @@
 .header_sign_up_button {
     background: #F8F7F7;
     border: #F8F7F7;
-    font-size: 22px;
+    font-size: 16px;
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 600;
     font-style: normal;
 }
 .header_sing_in_button {
-    width: 268px;
-    height: 70px;
+    width: 200px;
+    height: 60px;
     background-color: #FF9D00;
     border-color: #F8F7F7;
     border-radius: 52px;   
     color: #F8F7F7;
-    font-size: 22px;
+    font-size: 16px;
     font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; */
     font-weight: 600;
     font-style: normal;
-    box-shadow: none;
+    /* box-shadow: none; */
 }
-.header_arrow_down_1,
-.header_arrow_down_2 {
-    width: 18.57px;
-    height: 10px;
-    display: inline-block;
-    vertical-align: middle;
-    object-fit: contain;
-    margin-left: 6px; 
+.header_arrow_down {
+        display: inline-block;
+        width: 10px; /* ширина сторін */
+        height: 10px;
+        margin-left: 10px;
+        margin-top: 0; /* вирівнюємо відносно flex-центру */
+        border-right: 2px solid #000000; /* товщина як у Figma */
+        border-bottom: 2px solid #000000;
+        border-radius: 2px; /* твій border-radius з коду фігми */
+        transform: rotate(45deg); /* повертаємо квадрат, щоб вийшла стрілка */
+        transition: 0.3s ease;
 }
 
 .log_in {
@@ -106,17 +136,17 @@
     gap: 140px;
 }
 .log_in_title {
-    font-size: 64px;
+    font-size: 80px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 900;
     font-style: normal;
 }
 .hightlight {
     color: #FF9D00;
 }
 .log_in_text {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 45px;
     color: #545454;
     font-family: "Inter", sans-serif;
@@ -140,10 +170,10 @@
 }
 .log_in_choose_title {
     margin-left: 40px;
-    font-size: 32px;
+    font-size: 24px;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
 }
 .log_in_choose_list {
@@ -177,7 +207,7 @@
 }
 .log_in_choose_student_title,
 .log_in_choose_worker_title {
-    font-size: 36px;
+    font-size: 24px;
     color: #000;
     margin-top: 8px;
     font-family: "Inter", sans-serif;
@@ -196,11 +226,11 @@
     border-radius: 16px;
 }
 .log_in_choose_other_box_text {
-    font-size: 24px;
+    font-size: 16px;
     color: #000;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -215,26 +245,32 @@
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    padding-top: 40px;
 }
 .log_in_title_box {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
-    margin-left: 41px;
+
+    /* margin-top: 10px; */
+    margin-bottom: 40px;
     position: relative;
 }
+
 .log_in_title_box_arrow_svg {
+    position: absolute;
+    left: 30px; /* Вирівнюємо стрілку по тій самій лінії, що й білий блок (margin-left: 30px) */
     width: 31px;    
     height: 25px;
-    display: inline-block;
-    vertical-align: middle;
-    object-fit: contain;
+    cursor: pointer;
+    /* Видалив margin-right, бо з absolute він вже не потрібен */
 }
+
 .log_in_title_box_title {
     font-size: 24px;
     text-align: center;
-    flex-grow: 1;
+    margin: 0;
+    font-weight: 700;
 }
 
 
@@ -258,7 +294,7 @@
     gap: 21px;
 }
 .log_in_email {
-    font-size: 30px;
+    font-size: 16px;
     color: #414141;
 }
 .log_in_email_input {
@@ -271,7 +307,7 @@
     background: #E4E1DB;
 }
 .log_in_password {
-    font-size: 30px;
+    font-size: 16px;
     color: #414141;
 }
 .log_in_password_input {
@@ -291,7 +327,7 @@
     background-color: #DDDDDD;
     border-radius: 52px;   
     color: #939393;
-    font-size: 22px;
+    font-size: 16px;
     box-shadow: none;
-    font-weight: 600;
+    font-weight: 700;
 }
