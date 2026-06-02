@@ -137,6 +137,15 @@ body {
 }
 
 /* Велика сіра плашка під послуги */
+.service_port {
+  font-style: normal;
+  display: block; /* щоб займати весь простір картки */
+  text-decoration: none; /* прибираємо підкреслення */
+  color: inherit; /* наслідуємо колір тексту, не синій */
+  cursor: pointer; /* зберігаємо індикацію клікабельності */
+  outline: none;
+  
+}
 .services-main-card {
   background-color: #f8f7f7;
   border-radius: 40px;

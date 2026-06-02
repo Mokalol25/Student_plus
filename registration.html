@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="./JS/registration.js"></script>
 </head>
 <body>
     <header class="header">
@@ -22,9 +23,7 @@
                     </li>
                     <li class="header_item">
                         <h3 class="header_variants">Послуги
-                            <span>
-                                <img class="header_arrow_down_1" src="./img/header/arrow-down.svg" alt="arrow-down">
-                            </span>
+                            <span class="header_arrow_down"></span>
                         </h3>
                     </li>
                     <li class="header_item">
@@ -35,9 +34,7 @@
                     </li>
                     <li class="header_item">
                         <h3 class="header_variants">Про нас
-                            <span>
-                                <img class="header_arrow_down_2" src="./img/header/arrow-down.svg" alt="arrow-down">
-                            </span>
+                            <span class="header_arrow_down"></span>
                         </h3>
                     </li>
                     <li class="header_item">
@@ -63,15 +60,15 @@
             <div class="log_in_sequence">
 
 
-                <div class="log_in_choose">
+                <div class="log_in_choose" id="role_selection">
                     <div class="log_in_choose_box">
                         <h3 class="log_in_choose_title">Оберіть роль</h3>
                         <ul class="log_in_choose_list">
-                            <li class="log_in_choose_item">
+                            <li class="log_in_choose_item" id="student_choice">
                                 <img class="log_in_choose_student_img" src="./img/registration/header/Student_img.png" alt="Студент">
                                 <h4 class="log_in_choose_student_title">Студент</h4>
                             </li>
-                            <li class="log_in_choose_item">
+                            <li class="log_in_choose_item" id="worker_choice">
                                 <img class="log_in_choose_worker_img" src="./img/registration/header/Worker_img.png" alt="Працівник">
                                 <h4 class="log_in_choose_worker_title">Працівник</h4>
                             </li>
@@ -83,8 +80,8 @@
                 </div>
 
 
-                <div class="log_in_sing_up_blanc">
-                    <div class="log_in_title_box">
+                <div class="log_in_sing_up_blanc" id="login_form" style="display: none;">
+                    <div class="log_in_title_box" id="back_button">
                         <svg class="log_in_title_box_arrow_svg">
                             <use class="log_in_title_box_arrow" href="./img/log_in/header/arrow-back.svg"></use>
                         </svg>
